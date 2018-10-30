@@ -1,5 +1,3 @@
-//console.log("starting notes.js");
-
 const fs=require('fs');
 
 var fetchNotes=()=>{
@@ -34,9 +32,7 @@ var fetchNotes=()=>{
 
 var removeNote=(title)=>{
     var notes=fetchNotes();
-    //filter notes, removing the one with  title of argument
     var filterNotes=notes.filter((note)=>note.title!=title);
-    //save new notes array
     saveNotes(filterNotes);
 
     return notes.length!=filterNotes.length;
@@ -51,10 +47,6 @@ var getNote=(title)=>{
     var filterNotes=notes.filter((note)=>note.title==title);
     return filterNotes[0];
 };
-// var removeNote=(title)=>{
-//     console.log('Removing note',title);
-// };
-
 var logNote=(note)=>{
     debugger;
     console.log("------*------*------");
@@ -70,18 +62,4 @@ module.exports={
     removeNote,
     logNote
 };
-
-// module.exports.age=21;
-
-// module.exports.add=(a,b)=>{
-//     return a+b;
-// }
-
-// module.exports.multiply=(a,b)=>{
-//     return a*b;
-// }
-
-// module.exports.add=()=>{
-//     console.log()
-// }
 
