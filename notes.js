@@ -6,6 +6,7 @@ var fetchNotes=()=>{
     try{
         var noteString=fs.readFileSync('notes-data.json');
         return JSON.parse(noteString);
+        
       } catch(e) {
           return [];
       }
@@ -42,7 +43,7 @@ var removeNote=(title)=>{
 }
 
 var getAll=()=>{
-    console.log('Getting all notes');
+    return fetchNotes();
 };
 
 var getNote=(title)=>{
@@ -55,6 +56,7 @@ var getNote=(title)=>{
 // };
 
 var logNote=(note)=>{
+    debugger;
     console.log("------*------*------");
     console.log(`Title: ${note.title}`);
     console.log(`Body: ${note.body}`);

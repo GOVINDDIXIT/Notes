@@ -31,7 +31,9 @@ else if(command=='read'){
     }
 }
 else if(command=='list'){
-    notes.getAll(argv.title);
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} note(s)`)
+    allNotes.forEach((note)=>notes.logNote(note));
 }
 else if(command=='remove'){
    var noteRemoved= notes.removeNote(argv.title);
