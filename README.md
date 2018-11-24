@@ -1,9 +1,9 @@
 # Notes
 A Command line notes app created using javascript
 
-### To add a 
+### To add a note
 `
-node app.js add -t "write title here" -b "Write body here"
+node app.js add -t "write title here" -b "write body here"
 `
 ### To remove a note
 `
