@@ -1,5 +1,5 @@
 # Notes
-A Command line notes app created using javascript
+A basic Command line notes app created using Javascript.
 
 ### To add a note
 `
